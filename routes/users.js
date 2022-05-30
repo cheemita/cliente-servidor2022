@@ -7,4 +7,8 @@ router.get('/', function(req, res, next) {
   res.render("list", { title: "some text"});
 });
 
+router.get('/permissions', function(req, res, next) {
+  res.render("permissions");
+});
+
 module.exports = router;
