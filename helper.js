@@ -4,7 +4,7 @@ function getOffset(currentPage = 1, listPerPage){
 }
 
 function emptyOrRows(rows) {
-    if(!row) {
+    if(!rows) {
         return [];
     }
 
