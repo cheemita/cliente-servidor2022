@@ -18,7 +18,9 @@ async function getMultiple(page = 1){
     }
 }
 
-
+module.exports = {
+    getMultiple,
+};
 
 
 async function getUser(page = 1){
@@ -39,5 +41,4 @@ async function getUser(page = 1){
 
 module.exports = {
     getUser, 
-    getMultiple
 };

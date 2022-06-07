@@ -11,15 +11,15 @@ router.get('/permissions', function(req, res, next) {
   res.render("permissions");
 });
 
-  router.get('/json-list', async function(req, res, next){
-    const users = require('../services/languages'); 
-    try{
-      res.json(await users.getUser(req.query.page));
-    }
-    catch(err){
-        console.error('Error' + err.message);
-        next(err);
-    }
+router.get('/json-list', async function(req, res, next){
+  const users = require('../services/languages'); 
+  try{
+    res.json(await users.getUser(req.query.page));
+  }
+  catch(err){
+      console.error('Error' + err.message);
+      next(err);
+  }
 });
 
 
