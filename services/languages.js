@@ -18,10 +18,6 @@ async function getMultiple(page = 1){
     }
 }
 
-module.exports = {
-    getMultiple,
-};
-
 
 async function getUser(page = 1){
     const offset = helper.getOffset(page, config.listPerPage);
@@ -41,4 +37,5 @@ async function getUser(page = 1){
 
 module.exports = {
     getUser, 
+    getMultiple
 };
