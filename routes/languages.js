@@ -38,4 +38,16 @@ router.put("/:id", async function(req, res, next){
 
 });
 
+router.delete("/:id", async function(req, res, next){
+
+    try{
+        res.json(await languages.remove(req.params.id, req.body))
+    }
+    catch(error){
+        console.log("Error while deleting a language", error.message);
+        next(error);
+    }
+
+});
+
 module.exports = router;
